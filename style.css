@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900&display=swap");
 
+:root {
+  --Pure-Black: #000;
+  --Pure-White: #fff;
+}
+
 *,
 *::before,
 *::after {
@@ -13,7 +18,51 @@ html {
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
   padding: 0;
   margin: 0;
   font-size: 16px;
+  background-color: var(--Pure-Black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  background-color: var(--Pure-White);
+  padding: 2.4rem;
+}
+
+.calculatorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.calculatorOutput {
+  min-width: 200px;
+  min-height: 30px;
+  border: 1px solid #000;
+}
+
+.calculatorInput {
+  background-color: var(--Pure-Black);
+  padding: 0.8rem;
+}
+
+.calculatorInputContainer {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(3vw, 50px));
+  grid-template-rows: repeat(5, minmax(3vw, 50px));
+  gap: 1rem;
+}
+
+.btn {
+  background-color: var(--Pure-White);
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
 }
